@@ -12,7 +12,7 @@ class proxyrotator_server(socketserver.ThreadingMixIn, socketserver.TCPServer):
 
 class proxyrotator_handler(socketserver.StreamRequestHandler):
 
-    def log(self, value, color='[G1]'):
+    def log(self, value, color='[B1]'):
         log(value, color=color)
 
     def get_available_methods(self, n):
@@ -91,7 +91,7 @@ class proxyrotator_handler(socketserver.StreamRequestHandler):
         
         if not result:
             if result == False:
-                self.log('Authentication failed', color='[R1]')
+                self.log('Authentication failed', color='[W1]')
                 self.connection.sendall(struct.pack('!BB', self.server.socks_version, 0xFF))
             self.server.close_request(self.request)
             return
