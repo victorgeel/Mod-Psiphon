@@ -4,13 +4,13 @@
   "PropagationChannelId": "0000000000000000",
   "SponsorId": "0000000000000000",
 
-  "UpstreamProxyURL": "http://127.0.0.1:8989",
+  "UpstreamProxyURL": "http://127.0.0.1:1111",
   "EmitDiagnosticNotices": true,
   "EmitBytesTransferred": true,
 
   "DisableLocalHTTPProxy": true,
   "LocalSocksProxyPort": 3081,
-  "TunnelPoolSize": 2,
+  "TunnelPoolSize": 4,
 
   "LimitTunnelProtocols": ["FRONTED-MEEK-HTTP-OSSH", "FRONTED-MEEK-OSSH"],
   "EgressRegion": ""
