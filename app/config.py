@@ -34,8 +34,8 @@ class config(object):
         self.system_machine = sysconfig.get_platform()
         self.system_platform = platform.system()
         self.kuota_data_limit = 4000000
-        self.proxyrotator_port = 3080
-        self.domainfronting_port = 8989
+        self.proxyrotator_port = 1111
+        self.domainfronting_port = 2222
 
     def log(self, value, color='[G1]'):
         log(value, color=color)
