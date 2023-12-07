@@ -23,10 +23,10 @@ class psiphon(threading.Thread):
 
         self.daemon = True
 
-    def log(self, value, color='[G1]'):
+    def log(self, value, color='[B1]'):
         log(value, status=self.port, color=color)
 
-    def log_replace(self, value, color='[G1]'):
+    def log_replace(self, value, color='[Y1]'):
         log_replace(value, color=color)
 
     def size(self, bytes, suffixes=['B', 'KB', 'MB', 'GB'], i=0):
@@ -56,7 +56,7 @@ class psiphon(threading.Thread):
                 self.connected = 0
                 self.kuota_data = {}
                 self.kuota_data_all = 0
-                self.reconnecting_color = '[G1]'
+                self.reconnecting_color = '[B1]'
                 process = subprocess.Popen(self.command.split(' '), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                 for line in process.stdout:
                     if len(psiphon_stop) >= 1:
@@ -177,8 +177,8 @@ class psiphon(threading.Thread):
                     '''
             except json.decoder.JSONDecodeError:
                 self.force_stop = True
-                self.log(line.decode().strip(), color='[R1]')
-                self.log('Another process is running!', color='[R1]')
+                self.log(line.decode().strip(), color='[W1]')
+                self.log('Another process is running!', color='[G1]')
             except KeyboardInterrupt:
                 pass
             except Exception as exception:
