@@ -16,7 +16,7 @@ class psiphon(threading.Thread):
         self.verbose = verbose
         self.port = port
 
-        self.tunnels = 2 if self.multi_tunnel_enabled else 1
+        self.tunnels = 32 if self.multi_tunnel_enabled else 1
         self.kuota_data = {}
         self.kuota_data_all = 0
         self.force_stop = False
