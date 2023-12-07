@@ -37,7 +37,7 @@ class config(object):
         self.proxyrotator_port = 1111
         self.domainfronting_port = 2222
 
-    def log(self, value, color='[G1]'):
+    def log(self, value, color='[B1]'):
         log(value, color=color)
 
     def user_is_superuser(self):
