@@ -10,7 +10,7 @@
 
   "DisableLocalHTTPProxy": true,
   "LocalSocksProxyPort": 3087,
-  "TunnelPoolSize": 2,
+  "TunnelPoolSize": 6,
   
   "LimitTunnelProtocols": ["FRONTED-MEEK-HTTP-OSSH", "FRONTED-MEEK-OSSH"],
   "EgressRegion": ""
