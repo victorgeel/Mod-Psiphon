@@ -25,17 +25,17 @@ base {
 
 redsocks {
     local_ip = 127.0.0.1;
-    local_port = 3070;
+    local_port = 1111;
 
     ip = 127.0.0.1;
-    port = 3080;
+    port = 1111;
     type = socks5;
     login = "aztecrabbit";
     password = "aztecrabbit";
 }
 
-// Auto generated from Brainfuck Tunnel Psiphon Version
-// (c) 2019 Aztec Rabbit.
+// Auto generated from Tunnel Psiphon Version
+// (c) Modified by Geek
 
 ' > /etc/redsocks.conf
         '''.strip()
