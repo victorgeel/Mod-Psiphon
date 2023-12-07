@@ -1,5 +1,5 @@
 {
-  "core": 32,
+  "core": 6,
   "force_use_redsocks": false,
   "force_use_multi_tunnel": false
 }
