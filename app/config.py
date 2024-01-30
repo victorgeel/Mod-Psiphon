@@ -34,10 +34,10 @@ class config(object):
         self.system_machine = sysconfig.get_platform()
         self.system_platform = platform.system()
         self.kuota_data_limit = 4000000
-        self.proxyrotator_port = 1111
-        self.domainfronting_port = 2222
+        self.proxyrotator_port = 9191
+        self.domainfronting_port = 9693
 
-    def log(self, value, color='[B1]'):
+    def log(self, value, color='[Y1]'):
         log(value, color=color)
 
     def user_is_superuser(self):
@@ -70,8 +70,8 @@ class config(object):
     def load_psiphon_database(self):
         source, destination = [real_path(data) for data in self.file_psiphon_database]
         for i in range(16):
-            if not os.path.exists(destination.format(3081 + i)):
-                shutil.copyfile(source, destination.format(3081 + i))
+            if not os.path.exists(destination.format(9694 + i)):
+                shutil.copyfile(source, destination.format(9694 + i))
 
     def load_psiphon_tunnel_core(self):
         if self.system_machine in self.files_psiphon_tunnel_core:
