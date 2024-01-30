@@ -4,8 +4,8 @@ from .important import *
 
 def colors(value):
     patterns = {
-        'R1' : '\033[31;1m', 'G1' : '\033[32;1m',
-        'Y1' : '\033[33;1m', 'P1' : '\033[35;1m',
+        'P1' : '\033[31;1m', 'B1' : '\033[32;1m',
+        'Y1' : '\033[33;1m', 'R1' : '\033[35;1m',
         'CC' : '\033[0m'
     }
 
@@ -14,8 +14,8 @@ def colors(value):
 
     return value
 
-def log(value, status='INFO', color='[G1]'):
-    value = colors('{color}[{time}] [P1]:: {color}{status} [P1]:: {color}{value}[CC]'.format(
+def log(value, status='INFO', color='[B1]'):
+    value = colors('{color}[{time}] [R1]:: {color}{status} [R1]:: {color}{value}[CC]'.format(
         time=datetime.datetime.now().strftime('%H:%M:%S'), value=value, status=status, color=color
     ))
 
