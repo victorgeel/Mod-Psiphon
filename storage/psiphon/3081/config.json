@@ -1,15 +1,15 @@
 {
-  "DataStoreDirectory": "storage/psiphon/3081",
+  "DataStoreDirectory": "storage/psiphon/9693",
 
   "PropagationChannelId": "0000000000000000",
   "SponsorId": "0000000000000000",
 
-  "UpstreamProxyURL": "http://127.0.0.1:1111",
+  "UpstreamProxyURL": "http://127.0.0.1:9191",
   "EmitDiagnosticNotices": true,
   "EmitBytesTransferred": true,
 
   "DisableLocalHTTPProxy": true,
-  "LocalSocksProxyPort": 3081,
+  "LocalSocksProxyPort": 9693,
 
   "LimitTunnelProtocols": ["FRONTED-MEEK-HTTP-OSSH", "FRONTED-MEEK-OSSH"],
   "EgressRegion": ""
