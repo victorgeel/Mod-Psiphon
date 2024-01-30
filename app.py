@@ -23,7 +23,7 @@ def main():
         return
 
     if config.system_machine not in config.files_psiphon_tunnel_core:
-        app.log('This machine ({}) not available at this time!\n'.format(config.system_machine), color='[R1]')
+        app.log('This machine ({}) not available at this time!\n'.format(config.system_machine), color='[P1]')
         return
 
     if config.system_machine in config.system_machine_using_redsocks and not config.user_is_superuser():
@@ -62,7 +62,7 @@ def main():
     redsocks.start()
     
     for i in range(int(arguments.core if arguments.core is not None and arguments.core > 0 and arguments.core <= 16 else config.core)):
-        port = 3081 + i
+        port = 9693 + i
         app.psiphon(
             '{} -config storage/psiphon/{}/{}'.format(app.real_path(config.files_psiphon_tunnel_core[config.system_machine][1]), port, 'config-multi-tunnel.json' if config.multi_tunnel_enabled else 'config.json'),
             port, config.kuota_data_limit, config.multi_tunnel_enabled, arguments.verbose
@@ -78,7 +78,7 @@ def main():
     except OSError:
         app.psiphon_stop.append(1)
         redsocks.stop()
-        app.log('Port {} used by another programs'.format(config.domainfronting_port), color='[R1]')
+        app.log('Port {} used by another programs'.format(config.domainfronting_port), color='[P1]')
         app.log('Ctrl-C to exit')
     except KeyboardInterrupt:
         app.psiphon_stop.append(1)
