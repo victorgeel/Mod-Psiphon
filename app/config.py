@@ -70,8 +70,8 @@ class config(object):
     def load_psiphon_database(self):
         source, destination = [real_path(data) for data in self.file_psiphon_database]
         for i in range(16):
-            if not os.path.exists(destination.format(9694 + i)):
-                shutil.copyfile(source, destination.format(9694 + i))
+            if not os.path.exists(destination.format(9693 + i)):
+                shutil.copyfile(source, destination.format(9693 + i))
 
     def load_psiphon_tunnel_core(self):
         if self.system_machine in self.files_psiphon_tunnel_core:
@@ -92,7 +92,7 @@ class config(object):
 
         if exported_files in ['all', 'data', 'database']:
             for i in range(16):
-                files.append(self.file_psiphon_database[1].format(3081 + i))
+                files.append(self.file_psiphon_database[1].format(9693 + i))
 
             if exported_files != 'database':
                 for x in self.files_psiphon_tunnel_core:
